@@ -1,0 +1,20 @@
+
+/* Login Form */
+
+.loginForm{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    right: -300px;
+    z-index: 9999;
+}
+.closek{
+    right: -300px;
+    transition: 0.8s;
+
+}
+.expandk{
+    right: 0px;
+    transition: 0.8s;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;/* boostrap shadow */
+}

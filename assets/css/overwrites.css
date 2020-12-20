@@ -1,0 +1,76 @@
+
+/*
+    bootstrap v4.5.2
+*/
+.dropdown-toggle::after {
+    /*
+    display: none;
+    */
+    font-size:12px;
+    vertical-align: 0px;
+}
+/*
+    Change Bootstrap input focus color glow
+*/
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: rgba(243, 156, 18, 0.8);
+    /*
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(243, 156, 18, 0.6);
+    */
+    box-shadow: none;
+    outline: 0 none;
+}
+.form-control:focus {
+    border-color: #f39c12;
+    /*
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 156, 18, 0.6);
+    */
+    box-shadow: none;
+}
+.custom-select:focus{
+    border-color: #f39c12;
+    box-shadow: none;
+}
+
+/*
+    Pagination
+*/
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #f39c12;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+/* List Groups*/
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
