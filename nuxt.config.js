@@ -1,3 +1,5 @@
+import { BIconTruckFlatbed } from "bootstrap-vue";
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -23,6 +25,9 @@ export default {
         src: 'https://code.jquery.com/jquery-3.5.1.min.js'
       },
       {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'
+      },
+      {
         src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js',
         integrity: 'sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW',
         crossorigin: 'anonymous',
@@ -30,14 +35,25 @@ export default {
       },
       {
         src: 'js/nav.js'
-      }
+      },
+      {
+        src: 'js/addmems.js'
+      },
+      {
+        src: 'js/requisite.js',
+        body: true
+      },
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~assets/css/bootstrap-rtl.min.css',
-    '~assets/css/navigation.css'
+    '~assets/css/bootstrap-reboot.min.css',
+    '~assets/css/defaults.css',
+    '~assets/css/navigation.css',
+    '~assets/css/signForm.css',
+    '~assets/css/overwrites.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -50,19 +66,21 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
   ],
-
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    '@nuxt/content'
   ],
-
+  atuh: {
+    //options
+  },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
