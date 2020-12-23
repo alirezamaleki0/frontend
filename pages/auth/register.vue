@@ -2,7 +2,7 @@
   <div class="container memForm">
     <div class="row justify-content-center">
       <div class="col-4 shadow p-5 rounded">
-        <form action="">
+        <form @submit.prevent="register" action="post">
           <div class="form-group">
             <label for="usrnm">یک نام کاربری برای خود انتخاب کنید:</label>
             <input
@@ -10,6 +10,7 @@
               id="usrnm"
               class="form-control form-control-sm"
               placeholder="username"
+              v-model="form.name"
             />
           </div>
           <div class="form-group">
@@ -21,6 +22,7 @@
               id="usrpass"
               class="form-control form-control-sm"
               placeholder="userpassword"
+              v-model="form.password"
             />
           </div>
           <div class="form-group">
@@ -40,6 +42,7 @@
               class="form-control form-control-sm"
               id="usrml"
               placeholder="usermail"
+              v-model="form.email"
             />
           </div>
           <input
@@ -54,8 +57,24 @@
 </template>
 
 <script>
-export default {};
-</script>
+export default {
+  data(){
+    return {
+      form: {
+        name: '',
+        email: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+   async register(){
+      await this.$axios.post('auth/register', this.form);
 
-<style>
-</style>
+      this.$auth.login(this.form);
+
+      this.$router.pugh({name: 'index'});
+    }
+  }
+};
+</script>

@@ -4,12 +4,12 @@
     <div class="row py-1">
       <!--login and register-->
       <div class="col-5 col-sm-6 text-right login">
-        <nuxt-link to="/login">
+        <nuxt-link to="/auth/login">
           <b-icon icon="person-fill"></b-icon>
           <span class="font-size-12 d-none d-sm-inline-block">ورود</span>
         </nuxt-link>
 
-        <nuxt-link to="/register">
+        <nuxt-link to="/auth/register">
           <b-icon icon="person-plus-fill"></b-icon>
           <span class="font-size-12 d-none d-sm-inline-block">عضویت</span>
         </nuxt-link>

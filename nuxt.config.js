@@ -79,15 +79,36 @@ export default {
     '@nuxt/content'
   ],
   atuh: {
-    //options
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'auth/login', method: 'post', propertyName: 'token'
+          },
+          user: {
+            url: 'me', method: 'get', propertyName: 'data'
+          },
+          logout: {
+            url: 'auth/logout', method: 'get'
+          }
+        }
+      }
+    },
+    redirect: {
+      login: 'auth/login',
+      home: '/'
+    }
   },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:8000/api'
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+   extractCSS: true
   }
 }
