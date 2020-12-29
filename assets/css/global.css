@@ -1,0 +1,18 @@
+input {
+    direction: rtl;
+}
+
+div {
+    text-align: right;
+}
+
+@font-face {
+    font-family: 'sahel';
+    src: url("../fonts/Sahel.woff") format("woff");
+}
+
+body {
+    font-family: "sahel";
+    margin: 0;
+    padding: 0;
+}

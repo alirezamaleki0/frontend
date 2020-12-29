@@ -1,8 +1,8 @@
 <template>
-  <div>
-   <Slider />
+  <div class="container bg-light">
+  user: {{this.$auth.loggedIn}}
   </div>
-</template> 
+</template>
 
 <script>
 import Slider from '~/components/slider.vue';
@@ -10,11 +10,6 @@ export default {
   components:{
     Slider
   },
-  head(){
-    
-  }
+
 };
 </script>
-
-<style>
-</style>
